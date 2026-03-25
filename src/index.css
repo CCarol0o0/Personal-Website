@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=ZCOOL+XiaoWei&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "ZCOOL XiaoWei", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Noto Sans SC", "ZCOOL XiaoWei", ui-monospace, SFMono-Regular, monospace;
+
+  /* Light Mode Colors (Warm Sand & Orange) */
+  --color-bg: #F9F6F0;
+  --color-text: #2C2A29;
+  --color-accent: #EA580C;
+  --color-accent-secondary: #C2410C;
+  --color-border: #E5E0D8;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F2EFE9;
+}
+
+/* Dark Mode Colors (MAG: Black, Yellow) */
+.dark {
+  --color-bg: #000000;
+  --color-text: #FFFFFF;
+  --color-accent: #FFD368;
+  --color-accent-secondary: #FFD368;
+  --color-border: #333333;
+  --color-card: #111111;
+  --color-card-hover: #1A1A1A;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar for Carousels */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
