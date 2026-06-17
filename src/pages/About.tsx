@@ -131,7 +131,7 @@ export default function About() {
         {/* Sports */}
         <div className="flex flex-col bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-sm h-[360px]">
           <div className="h-[240px] w-full">
-            <Carousel images={['/Assets-carol/life-sports1.jpg', '/Assets-carol/life-sports2.jpg', '/Assets-carol/life-sports3.jpg']} altText="Sports" />
+            <Carousel images={['/Assets-carol/life-sports1.jpg']} altText="Sports" />
           </div>
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-center justify-between mb-2">
