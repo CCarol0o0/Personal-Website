@@ -6,6 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export default function About() {
   const { t } = useLanguage();
+  const asset = (fileName: string) => `${import.meta.env.BASE_URL}Assets-carol/${fileName}`;
 
   return (
     <div className="space-y-12 animate-in fade-in duration-700">
@@ -89,7 +90,7 @@ export default function About() {
           {/* Me */}
          <div className="flex flex-col bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-sm h-[360px]">
           <div className="h-[240px] w-full">
-            <Carousel images={['/Assets-carol/me1.jpg', '/Assets-carol/me2.jpg', '/Assets-carol/me3.jpg']} altText="This is Me" />
+            <Carousel images={[asset('me1.jpg'), asset('me2.jpg'), asset('me3.jpg')]} altText="This is Me" />
           </div>
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-center justify-between mb-2">
@@ -103,7 +104,7 @@ export default function About() {
         {/* Art */}
         <div className="flex flex-col bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-sm h-[360px]">
           <div className="h-[240px] w-full">
-            <Carousel images={['/Assets-carol/life-art1.jpg', '/Assets-carol/life-art2.jpg', '/Assets-carol/life-art3.jpg', '/Assets-carol/life-art4.jpg', '/Assets-carol/life-art5.jpg', '/Assets-carol/life-art6.jpg']} altText="My Art" />
+            <Carousel images={[asset('life-art1.jpg'), asset('life-art2.jpg'), asset('life-art3.jpg'), asset('life-art4.jpg'), asset('life-art5.jpg'), asset('life-art6.jpg')]} altText="My Art" />
           </div>
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-center justify-between mb-2">
@@ -117,7 +118,7 @@ export default function About() {
         {/* Cat */}
         <div className="flex flex-col bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-sm h-[360px]">
           <div className="h-[240px] w-full">
-            <Carousel images={['/Assets-carol/life-cat1.jpg', '/Assets-carol/life-cat2.jpg', '/Assets-carol/life-cat3.jpg']} altText="My Cat" />
+            <Carousel images={[asset('life-cat1.jpg'), asset('life-cat2.jpg'), asset('life-cat3.jpg')]} altText="My Cat" />
           </div>
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-center justify-between mb-2">
@@ -131,7 +132,7 @@ export default function About() {
         {/* Sports */}
         <div className="flex flex-col bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-sm h-[360px]">
           <div className="h-[240px] w-full">
-            <Carousel images={['/Assets-carol/life-sports1.jpg']} altText="Sports" />
+            <Carousel images={[asset('life-sports1.jpg')]} altText="Sports" />
           </div>
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-center justify-between mb-2">
@@ -147,12 +148,12 @@ export default function About() {
           <div className="h-[280px] w-full">
             <Carousel 
               images={[
-                '/Assets-carol/enjoygame1.jpg', 
-                '/Assets-carol/enjoygame2.jpg', 
-                '/Assets-carol/enjoygame3.jpg', 
-                '/Assets-carol/enjoygame4.jpg', 
-                '/Assets-carol/enjoygame5.jpg', 
-                '/Assets-carol/enjoygame6.jpg'
+                asset('enjoygame1.jpg'), 
+                asset('enjoygame2.jpg'), 
+                asset('enjoygame3.jpg'), 
+                asset('enjoygame4.jpg'), 
+                asset('enjoygame5.jpg'), 
+                asset('enjoygame6.jpg')
               ]} 
               altText="Favorite Games" 
             />
@@ -168,14 +169,14 @@ export default function About() {
           <div className="h-[280px] w-full">
             <Carousel 
               images={[
-                '/Assets-carol/enjoymovie1.jpg', 
-                '/Assets-carol/enjoymovie2.jpg', 
-                '/Assets-carol/enjoymovie3.jpg', 
-                '/Assets-carol/enjoymovie4.jpg', 
-                '/Assets-carol/enjoymovie5.jpg',
-                '/Assets-carol/enjoytvshow1.jpg',
-                '/Assets-carol/enjoyanime1.jpg',
-                '/Assets-carol/enjoyanime2.jpg'
+                asset('enjoymovie1.jpg'), 
+                asset('enjoymovie2.jpg'), 
+                asset('enjoymovie3.jpg'), 
+                asset('enjoymovie4.jpg'), 
+                asset('enjoymovie5.jpg'),
+                asset('enjoytvshow1.jpg'),
+                asset('enjoyanime1.jpg'),
+                asset('enjoyanime2.jpg')
               ]} 
               altText="Watchlist" 
             />

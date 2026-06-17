@@ -4,13 +4,14 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Projects() {
   const { t } = useLanguage();
+  const asset = (fileName: string) => `${import.meta.env.BASE_URL}Assets-carol/${fileName}`;
 
   const projects = [
     {
       title: t('projects.indie.title'),
       badge: t('projects.indie.badge'),
       desc: t('projects.indie.desc'),
-      images: ['/Assets-carol/game-herroom.jpg', '/Assets-carol/game-drawing.jpg', '/Assets-carol/game-ui1.jpg', '/Assets-carol/game-ui2.jpg', '/Assets-carol/game-ui3.jpg', '/Assets-carol/game-ui4.jpg'],
+      images: [asset('game-herroom.jpg'), asset('game-drawing.jpg'), asset('game-ui1.jpg'), asset('game-ui2.jpg'), asset('game-ui3.jpg'), asset('game-ui4.jpg')],
       link: 'https://noobflash-study.itch.io/herroom',
       linkText: t('projects.indie.link'),
     },
@@ -18,19 +19,19 @@ export default function Projects() {
       title: t('projects.bi.title'),
       badge: t('projects.bi.badge'),
       desc: t('projects.bi.desc'),
-      images: ['/Assets-carol/project-powerbi.jpg', '/Assets-carol/project-powerbi1.png', '/Assets-carol/project-powerbi2.png', '/Assets-carol/project-tableaui.jpg'],
+      images: [asset('project-powerbi.jpg'), asset('project-powerbi1.png'), asset('project-powerbi2.png'), asset('project-tableaui.jpg')],
     },
     {
       title: t('projects.sim.title'),
       badge: t('projects.sim.badge'),
       desc: t('projects.sim.desc'),
-      images: ['/Assets-carol/project-simulation(des).jpg'],
+      images: [asset('project-simulation(des).jpg')],
     },
     {
       title: t('projects.consumer.title'),
       badge: t('projects.consumer.badge'),
       desc: t('projects.consumer.desc'),
-      images: ['/Assets-carol/project-skin.jpg'],
+      images: [asset('project-skin.jpg')],
     },
   ];
 
@@ -40,7 +41,7 @@ export default function Projects() {
       <section>
         <div className="relative overflow-hidden rounded-[2rem] bg-[var(--color-card)] border border-[var(--color-border)] shadow-sm group">
           <div className="h-[300px] md:h-[400px] w-full overflow-hidden">
-            <Carousel images={['/Assets-carol/Group 1.png', '/Assets-carol/Group 3.png', '/Assets-carol/project-twin-fullgraph-topology.jpg', '/Assets-carol/project-twin-platformgraph-topology.jpg']} altText="Digital Twin" />
+            <Carousel images={[asset('Group 1.png'), asset('Group 3.png'), asset('project-twin-fullgraph-topology.jpg'), asset('project-twin-platformgraph-topology.jpg')]} altText="Digital Twin" />
           </div>
           <div className="p-8 md:p-10 bg-[var(--color-card)] relative z-10">
             <div className="flex items-center gap-3 mb-4">
@@ -57,7 +58,7 @@ export default function Projects() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="/Assets-carol/subway-dashboard.html"
+                href={asset('subway-dashboard.html')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-text)] text-[var(--color-bg)] font-medium hover:bg-[var(--color-accent)] hover:text-white transition-colors"
@@ -66,7 +67,7 @@ export default function Projects() {
                 {t('projects.featured.btn1')}
               </a>
               <a
-                href="/Assets-carol/subway-analysis.html"
+                href={asset('subway-analysis.html')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-border)] bg-[var(--color-card)] hover:bg-[var(--color-card-hover)] transition-colors"

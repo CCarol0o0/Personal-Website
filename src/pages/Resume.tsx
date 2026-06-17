@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Resume() {
   const { t } = useLanguage();
+  const resumeUrl = `${import.meta.env.BASE_URL}Assets-carol/Resume.pdf`;
 
   return (
     <div className="space-y-12 animate-in fade-in duration-700 max-w-4xl mx-auto">
@@ -12,7 +13,7 @@ export default function Resume() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <a
-          href="/Assets-carol/Resume.pdf"
+          href={resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex flex-col items-center justify-center p-10 bg-[var(--color-card)] border border-[var(--color-border)] rounded-[2rem] hover:-translate-y-1 hover:shadow-lg transition-all"
@@ -24,7 +25,7 @@ export default function Resume() {
         </a>
 
         <a
-          href="/Assets-carol/Resume.pdf"
+          href={resumeUrl}
           download
           className="group flex flex-col items-center justify-center p-10 bg-[var(--color-card)] border border-[var(--color-border)] rounded-[2rem] hover:-translate-y-1 hover:shadow-lg transition-all"
         >
