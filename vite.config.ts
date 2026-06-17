@@ -4,8 +4,10 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(({command}) => {
+  const base = process.env.VERCEL ? '/' : command === 'build' ? '/Personal-Website/' : '/';
+
   return {
-    base: command === 'build' ? '/Personal-Website/' : '/',
+    base,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
